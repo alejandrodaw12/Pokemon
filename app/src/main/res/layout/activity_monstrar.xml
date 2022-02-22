@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_carta"
+    android:orientation="vertical"
+    tools:context=".repositories.repositories.MonstrarActivity">
+
+    <TextView
+        android:id="@+id/txt_nombre_poke"
+        android:layout_width="180dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="15dp"
+        android:gravity="right"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/txt_tipo_poke"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_tipo_poke"
+        android:layout_width="0dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="15dp"
+        android:gravity="left"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txt_nombre_poke"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_nombreAtaque_poke"
+        android:layout_width="315dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="368dp"
+        android:gravity="left"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.562"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_descripcion_poke"
+        android:layout_width="326dp"
+        android:layout_height="142dp"
+        android:layout_marginTop="20dp"
+        android:gravity="left"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/txt_nombreAtaque_poke"
+        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintStart_toStartOf="@+id/txt_nombreAtaque_poke"
+        app:layout_constraintTop_toBottomOf="@+id/txt_nombreAtaque_poke" />
+
+    <TextView
+        android:id="@+id/txt_debilidad_poke"
+        android:layout_width="323dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="16dp"
+        android:gravity="left"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/txt_descripcion_poke"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txt_descripcion_poke"
+        app:layout_constraintTop_toBottomOf="@+id/txt_descripcion_poke" />
+
+    <ImageView
+        android:id="@+id/img_imagen"
+        android:layout_width="351dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="124dp"
+        android:src="@drawable/titulo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Pokemon</string>
+    <string name="crear">Crear</string>
+    <string name="crear_pokemon">Crear Pokemon</string>
+    <string name="nombre">Nombre</string>
+    <string name="tipo">Tipo</string>
+    <string name="nombre_del_ataque">Nombre del Ataque</string>
+    <string name="descripcion">Descripcion</string>
+    <string name="debilidad">Debilidad</string>
+
+    <string name="ataque">Ataque:</string>
+    <string name="pokemon">Pokemon:</string>
+    <string name="todo">TODO</string>
+</resources>
