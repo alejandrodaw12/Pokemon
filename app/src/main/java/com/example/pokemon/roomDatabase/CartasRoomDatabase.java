@@ -7,10 +7,11 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
 
+import com.example.pokemon.clases.Cartas;
 import com.example.pokemon.DAO.DAOCartas;
 
 
-@Database(entities = {DAOCartas.class}, version = 1, exportSchema = false)
+@Database(entities = {Cartas.class}, version = 2, exportSchema = false)
 public abstract class CartasRoomDatabase extends RoomDatabase {
     public abstract DAOCartas cartasDao();
     private static CartasRoomDatabase INSTANCE;
@@ -19,7 +20,7 @@ public abstract class CartasRoomDatabase extends RoomDatabase {
             synchronized (CartasRoomDatabase.class) {
                 if (INSTANCE == null) {
                     INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
-                            CartasRoomDatabase.class, "ciudad_database")
+                            CartasRoomDatabase.class, "cartas_database")
                             // Wipes and rebuilds instead of migrating
                             // if no Migration object.
                             // Migration is not part of this practical.

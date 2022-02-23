@@ -1,13 +1,9 @@
-package com.example.pokemon.tareas;
+package com.example.pokemon.repositories.tareas;
 
-
-
-import com.example.pokemon.Clases.Cartas;
-import com.example.pokemon.DAO.DAOCartas;
-import com.example.pokemon.repositories.repositories.repositories.CartasRepository;
+import com.example.pokemon.clases.Cartas;
+import com.example.pokemon.repositories.CartasRepository;
 
 import java.util.concurrent.Callable;
-
 
 public class TareaBorrarCartas implements Callable<Boolean> {
     private Cartas c = null;
@@ -19,7 +15,7 @@ public class TareaBorrarCartas implements Callable<Boolean> {
     @Override
     public Boolean call() throws Exception {
         try{
-            CartasRepository.mDAOCartas.delete(c);
+            CartasRepository.mCartasDao.delete(c);
             return true;
         }
         catch (Exception e)

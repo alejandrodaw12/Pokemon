@@ -10,23 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar" >
         <activity
-            android:name=".repositories.repositories.ListaCartaActivity"
+            android:name=".NuevaCartasActivity"
             android:exported="true" />
         <activity
-            android:name=".repositories.repositories.BorrarCartaActivity"
+            android:name=".BorrarCartaActivity"
             android:exported="false" />
         <activity
-            android:name=".repositories.repositories.EditarCartaActivity"
+            android:name=".MostrarCartasActivity"
             android:exported="false" />
         <activity
-            android:name=".repositories.repositories.CrearCartaActivity"
-            android:exported="false" />
-        <activity
-            android:name=".repositories.repositories.MonstrarActivity"
-            android:exported="false" />
-        <activity
-            android:name=".repositories.repositories.MainActivity"
+            android:name=".MainActivity"
             android:exported="true" >
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -5,25 +5,40 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/purple_500"
-    tools:context=".repositories.repositories.CrearCartaActivity">
+    tools:context=".NuevaCartasActivity">
+
+    <EditText
+        android:id="@+id/txt_id"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="208dp"
+        android:ems="10"
+        android:hint="@string/id"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/txt_nombre"
+        app:layout_constraintStart_toStartOf="@+id/txt_nombre"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
 
     <EditText
         android:id="@+id/txt_nombre"
         android:layout_width="0dp"
         android:layout_height="45dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="168dp"
+        android:layout_marginTop="132dp"
         android:layout_marginEnd="32dp"
         android:ems="10"
         android:hint="@string/nombre"
+        android:importantForAutofill="no"
         android:inputType="textPersonName"
         android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="TouchTargetSizeCheck"
-        android:importantForAutofill="no" />
+        tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
         android:id="@+id/txt_tipo"
@@ -35,11 +50,11 @@
         android:importantForAutofill="no"
         android:inputType="textPersonName"
         android:textColorHint="@color/white"
-        app:layout_constraintEnd_toEndOf="@+id/txt_nombre"
+        app:layout_constraintEnd_toEndOf="@+id/txt_id"
         app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="@+id/txt_nombre"
-        app:layout_constraintTop_toBottomOf="@+id/txt_nombre"
-        tools:ignore="TouchTargetSizeCheck" />
+        app:layout_constraintStart_toStartOf="@+id/txt_id"
+        app:layout_constraintTop_toBottomOf="@+id/txt_id"
+        tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
 
     <EditText
         android:id="@+id/txt_nombreataque"
@@ -94,7 +109,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
-        android:onClick="crear"
         android:text="@string/crear_pokemon"
         android:textColor="@color/white"
         android:textSize="34sp"
@@ -107,13 +121,17 @@
 
     <Button
         android:id="@+id/btn_crear"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="56dp"
-        android:backgroundTint="@android:color/holo_orange_dark"
+        android:layout_width="179dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginBottom="40dp"
+        android:background="@android:color/holo_orange_dark"
+        android:onClick="crearCarta"
         android:text="@string/crear"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.851"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,4 @@
-package com.example.pokemon.Clases;
+package com.example.pokemon.clases;
 
 
 import androidx.annotation.NonNull;
@@ -6,10 +6,11 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import java.io.Serializable;
 import java.util.Objects;
 
 @Entity(tableName = "cartas")
-public class Cartas {
+public class Cartas implements Serializable {
 
     //atributos ----------------------------------------------------
     @PrimaryKey
@@ -37,8 +38,7 @@ public class Cartas {
     @ColumnInfo(name = "debilidad")
     private String debilidad;
 
-    public Cartas(int idcarta, @NonNull String nombre, @NonNull String tipo, @NonNull String nombre_ataque, @NonNull String desAtaque, @NonNull String debilidad) {
-        this.idcarta = idcarta;
+    public Cartas(int idcarta,@NonNull String nombre, @NonNull String tipo, @NonNull String nombre_ataque, @NonNull String desAtaque, @NonNull String debilidad) {
         this.nombre = nombre;
         this.tipo = tipo;
         this.nombre_ataque = nombre_ataque;

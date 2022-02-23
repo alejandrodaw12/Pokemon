@@ -1,4 +1,4 @@
-package com.example.pokemon.Clases;
+package com.example.pokemon.clases;
 
 import android.content.Context;
 import android.util.Log;
@@ -34,7 +34,7 @@ public class ListaCartasAdapter extends RecyclerView.Adapter<CartasViewHolder> {
     @NonNull
     @Override
     public CartasViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View mItemView = mInflater.inflate(R.layout.activity_lista_carta, parent, false);
+        View mItemView = mInflater.inflate(R.layout.monstar_pokemon, parent, false);
         return new CartasViewHolder(mItemView, this);
     }
 
@@ -43,10 +43,8 @@ public class ListaCartasAdapter extends RecyclerView.Adapter<CartasViewHolder> {
     public void onBindViewHolder(@NonNull CartasViewHolder holder, int position) {
         if(listaCartas!=null) {
             Cartas cartaActual = listaCartas.get(position);
-            holder.txt_rv_nombrec.setText("Ciudad: " + cartaActual.getNombre());
-            holder.txt_rv_tipo.setText("Tipo: " + cartaActual.getTipo());
+            holder.txt_rv_nombrec.setText("Nombre: " + cartaActual.getNombre());
             holder.txt_rv_nombre_ataque.setText("Nombre Ataque: " + cartaActual.getNombre_ataque());
-            holder.txt_rv_desAtaque.setText("Descripcion Ataque: " + cartaActual.getDesAtaque());
             holder.txt_rv_debilidad.setText("Debilidad: " + cartaActual.getDebilidad());
         }
     }
@@ -70,16 +68,16 @@ public class ListaCartasAdapter extends RecyclerView.Adapter<CartasViewHolder> {
         return listaCartas;
     }
 
-    public void setListaCiudades(List<Cartas> listaCartas) {
+    public void setListaCartas(List<Cartas> listaCartas) {
         this.listaCartas = listaCartas;
         if(this.listaCartas == null)
         {
-           Log.i("ciudades","la lista ciudades es nulo");
+           Log.i("cartas","la lista cartas es nulo");
         }
         else{
             for(Cartas c:listaCartas)
             {
-                Log.i("ciudades","ciudad -> " + c.getNombre());
+                Log.i("cartas","cartas -> " + c.getNombre());
             }
         }
         notifyDataSetChanged();

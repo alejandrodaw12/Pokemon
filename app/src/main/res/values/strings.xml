@@ -11,4 +11,12 @@
     <string name="ataque">Ataque:</string>
     <string name="pokemon">Pokemon:</string>
     <string name="todo">TODO</string>
+    <string name="borrar_carta">BORRAR CARTA</string>
+    <string name="item_cartas">item_cartas</string>
+    <string name="actualizar_carta">Actualizar Carta</string>
+    <string name="siguiente">SIGUIENTE</string>
+    <string name="lista_de_cartas">Lista de Cartas</string>
+    <string name="button">Button</string>
+    <string name="id">id</string>
+
 </resources>

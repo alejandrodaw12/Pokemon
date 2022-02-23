@@ -5,21 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/purple_500"
-    tools:context=".repositories.repositories.ListaCartaActivity">
+    tools:context=".MostrarCartasActivity">
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="212dp"
-        android:layout_height="24dp"
+        android:layout_width="210dp"
+        android:layout_height="32dp"
         android:layout_marginTop="56dp"
         android:gravity="center"
-        android:text="Lista de Cartas"
+        android:text="@string/lista_de_cartas"
         android:textColor="@color/white"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_cartas"
         android:layout_width="0dp"
         android:layout_height="463dp"
         android:layout_marginStart="25dp"
@@ -29,4 +31,19 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/btn_actualizar_list"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="44dp"
+        android:background="@android:color/holo_orange_dark"
+        android:text="@string/button"
+        android:onClick="refrescarCartas"
+        app:layout_constraintEnd_toEndOf="@+id/rv_cartas"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/rv_cartas"
+        app:layout_constraintTop_toBottomOf="@+id/rv_cartas"
+        tools:ignore="TextContrastCheck" />
 </androidx.constraintlayout.widget.ConstraintLayout>
